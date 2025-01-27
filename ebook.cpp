@@ -1,4 +1,3 @@
-#include <stdexcept>
 #include <vector>
 #include <string>
 #include <iostream>
@@ -54,12 +53,12 @@ int main(){
     for (int i = 0; i < request_num; ++i){
         std::string request_type;
         std::cin >> request_type;
-        if (request_type.at(0) == 'R'){
+        if (request_type == "READ"){
             int user, pages;
             std::cin >> user >> pages;
             ebook.UserRead(user, pages);
         }
-        if (request_type.at(0) == 'C'){
+        if (request_type == "CHEER"){
             int user;
             std::cin >> user;
             std:: cout << std::setprecision(6) << ebook.CheerUser(user) << std::endl;
